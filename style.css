@@ -55,7 +55,7 @@ header {
 }
 
 .discord-icon img {
-  height: 48px;
+  height: 60px;
   width: auto;
   margin-left: 18px;
   opacity: 0.95;
@@ -63,7 +63,7 @@ header {
 }
 
 .discord-icon img:hover {
-  transform: scale(1.15);
+  transform: scale(1.35);
   filter: drop-shadow(0 0 6px red);
 }
 
