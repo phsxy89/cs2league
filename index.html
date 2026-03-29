@@ -8,167 +8,150 @@
 <style>
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: black;
+  font-family: Arial, sans-serif;
+  background: #050505;
   color: white;
-  overflow-x: hidden;
 }
 
-/* REDLINE ANIMATION */
-body::before {
-  content: "";
-  position: fixed;
-  width: 200%;
-  height: 200%;
-  background: repeating-linear-gradient(
-    45deg,
-    rgba(255,0,0,0.05) 0px,
-    rgba(255,0,0,0.05) 2px,
-    transparent 2px,
-    transparent 20px
-  );
-  animation: moveLines 10s linear infinite;
-  z-index: -1;
-}
-
-@keyframes moveLines {
-  0% { transform: translate(0,0); }
-  100% { transform: translate(-200px,-200px); }
-}
-
-/* HEADER */
+/* NAVBAR */
 header {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  background: rgba(0,0,0,0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #111;
+}
+
+nav a {
+  margin: 0 20px;
+  color: #aaa;
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+nav a:hover {
+  color: red;
+}
+
+/* HERO */
+.hero {
+  height: 500px;
+  background: linear-gradient(120deg, #000, #1a0000);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 60px;
+  color: red;
+  margin: 0;
+}
+
+.hero p {
+  color: #aaa;
+  margin-top: 15px;
+}
+
+.hero .buttons {
+  margin-top: 25px;
+}
+
+.btn {
+  padding: 12px 22px;
+  margin: 5px;
+  border: none;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.btn-primary {
+  background: red;
+  color: white;
+}
+
+.btn-secondary {
+  border: 1px solid #333;
+  color: white;
+}
+
+/* SECTION */
+.section {
+  padding: 80px 40px;
+}
+
+.section-title {
+  font-size: 20px;
+  margin-bottom: 30px;
+  border-left: 3px solid red;
+  padding-left: 10px;
+}
+
+/* MATCH CARDS */
+.matches {
+  display: flex;
+  gap: 20px;
+}
+
+.match-card {
+  flex: 1;
+  background: #0a0a0a;
+  border: 1px solid #111;
+  padding: 20px;
+}
+
+.match-card h3 {
+  font-size: 16px;
+  color: #aaa;
+}
+
+.match-card .teams {
+  margin-top: 15px;
   display: flex;
   justify-content: space-between;
-  padding: 15px 30px;
-  border-bottom: 1px solid red;
-  z-index: 1000;
+  font-size: 18px;
 }
 
-.logo {
-  color: red;
-  font-weight: bold;
+/* INFO CARDS */
+.info {
+  display: flex;
+  gap: 20px;
+  margin-top: 40px;
 }
 
-/* MENU */
-.menu-btn {
-  font-size: 24px;
-  cursor: pointer;
-}
-
-.menu {
-  position: fixed;
-  right: -260px;
-  top: 0;
-  width: 260px;
-  height: 100%;
+.info-card {
+  flex: 1;
   background: #0a0a0a;
-  transition: 0.4s;
-  padding-top: 60px;
+  padding: 20px;
+  border: 1px solid #111;
 }
 
-.menu a {
-  display: block;
-  padding: 15px;
-  color: white;
-  text-decoration: none;
-  transition: 0.2s;
-}
-
-.menu a:hover {
-  background: red;
-  box-shadow: 0 0 10px red;
-}
-
-/* BANNER */
-.banner {
-  height: 450px;
-  background: url("https://images.unsplash.com/photo-1606813907291-d86efa9b94db") center/cover no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  margin-top: 60px;
-}
-
-.banner h1 {
-  font-size: 50px;
+.info-card h4 {
   color: red;
-  text-shadow: 0 0 20px red;
-}
-
-/* SECTIONS */
-.section {
-  padding: 80px 20px;
-  text-align: center;
-}
-
-/* TEAM CARDS */
-.grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.card {
-  background: rgba(255,0,0,0.05);
-  border: 1px solid red;
-  margin: 10px;
-  padding: 20px;
-  width: 240px;
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px red;
-}
-
-/* MATCH */
-.match {
-  background: #111;
-  padding: 20px;
-  margin: 10px auto;
-  max-width: 400px;
-  border: 1px solid red;
 }
 
 /* TABLE */
 table {
-  width: 90%;
-  margin: auto;
+  width: 100%;
   border-collapse: collapse;
+  margin-top: 30px;
 }
 
 th, td {
-  padding: 10px;
-  border-bottom: 1px solid red;
+  padding: 12px;
+  border-bottom: 1px solid #111;
+  font-size: 14px;
 }
 
 th {
-  color: red;
+  color: #777;
 }
 
-/* BUTTON */
-.button {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 10px 20px;
-  background: red;
-  color: white;
-  text-decoration: none;
-  box-shadow: 0 0 10px red;
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 20px;
-  background: black;
+tr:hover {
+  background: #0a0a0a;
 }
 </style>
 </head>
@@ -176,75 +159,97 @@ footer {
 <body>
 
 <header>
-  <div class="logo">CS PREMIERE LEAGUE</div>
-  <div class="menu-btn" onclick="toggleMenu()">☰</div>
+  <nav>
+    <a href="#">HOME</a>
+    <a href="#">STANDINGS</a>
+    <a href="#">SCHEDULE</a>
+    <a href="#">TEAMS</a>
+    <a href="#">PLAYOFFS</a>
+    <a href="#">REGISTER</a>
+  </nav>
 </header>
 
-<div class="menu" id="menu">
-  <a href="#">Home</a>
-  <a href="#teams">Teams</a>
-  <a href="#matches">Matches</a>
-  <a href="#ranking">Ranking</a>
-</div>
+<div class="hero">
+  <h1>CPL</h1>
+  <p>CS PREMIERE LEAGUE</p>
 
-<div class="banner">
-  <h1>CS PREMIERE LEAGUE</h1>
-</div>
-
-<div class="section" id="teams">
-  <h2>Teams</h2>
-  <div class="grid">
-    <div class="card">🔥 Team Alpha</div>
-    <div class="card">⚡ Team Bravo</div>
-    <div class="card">💀 Team Delta</div>
+  <div class="buttons">
+    <a href="#" class="btn btn-primary">VIEW STANDINGS</a>
+    <a href="#" class="btn btn-secondary">MATCH SCHEDULE</a>
   </div>
 </div>
 
-<div class="section" id="matches">
-  <h2>Matchplan</h2>
+<div class="section">
+  <div class="section-title">FEATURED MATCHES</div>
 
-  <div class="match">
-    Team Alpha vs Team Bravo<br>
-    <a class="button" href="#">Match starten</a>
+  <div class="matches">
+    <div class="match-card">
+      <h3>MATCH OF THE DAY</h3>
+      <div class="teams">
+        <span>FaZe Clan</span>
+        <span>VS</span>
+        <span>Vitality</span>
+      </div>
+    </div>
+
+    <div class="match-card">
+      <h3>FEATURED MATCH</h3>
+      <div class="teams">
+        <span>Natus Vincere</span>
+        <span>VS</span>
+        <span>G2</span>
+      </div>
+    </div>
   </div>
 
-  <div class="match">
-    Team Delta vs Team Alpha<br>
-    <a class="button" href="#">Match ansehen</a>
-  </div>
+  <div class="info">
+    <div class="info-card">
+      <h4>10 TEAMS</h4>
+      <p>Round-robin group stage</p>
+    </div>
 
+    <div class="info-card">
+      <h4>45 MATCHES</h4>
+      <p>Every team plays each other</p>
+    </div>
+
+    <div class="info-card">
+      <h4>TOP 4 PLAYOFFS</h4>
+      <p>Single elimination bracket</p>
+    </div>
+  </div>
 </div>
 
-<div class="section" id="ranking">
-  <h2>Ranking</h2>
+<div class="section">
+  <div class="section-title">STANDINGS</div>
 
   <table>
     <tr>
+      <th>#</th>
       <th>Team</th>
-      <th>Punkte</th>
+      <th>W</th>
+      <th>L</th>
+      <th>PTS</th>
     </tr>
+
     <tr>
-      <td>Team Alpha</td>
+      <td>1</td>
+      <td>Natus Vincere</td>
+      <td>7</td>
+      <td>1</td>
+      <td>22</td>
+    </tr>
+
+    <tr>
+      <td>2</td>
+      <td>FaZe Clan</td>
       <td>6</td>
+      <td>2</td>
+      <td>19</td>
     </tr>
-    <tr>
-      <td>Team Bravo</td>
-      <td>3</td>
-    </tr>
+
   </table>
-
 </div>
-
-<footer>
-  © 2026 CS Premiere League
-</footer>
-
-<script>
-function toggleMenu() {
-  let menu = document.getElementById("menu");
-  menu.style.right = (menu.style.right === "0px") ? "-260px" : "0px";
-}
-</script>
 
 </body>
 </html>
