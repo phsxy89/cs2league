@@ -43,9 +43,8 @@ header {
   color: red;
 }
 
-/* DISCORD ICON */
 .discord-icon img {
-  height: 150px;
+  height: 28px;
   width: auto;
   margin-left: 12px;
   opacity: 0.9;
