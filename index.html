@@ -9,8 +9,31 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: #050505;
+  background: black;
   color: white;
+  overflow-x: hidden;
+}
+
+/* REDLINE ANIMATION */
+body::before {
+  content: "";
+  position: fixed;
+  width: 200%;
+  height: 200%;
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(255,0,0,0.05) 0px,
+    rgba(255,0,0,0.05) 2px,
+    transparent 2px,
+    transparent 20px
+  );
+  animation: moveLines 10s linear infinite;
+  z-index: -1;
+}
+
+@keyframes moveLines {
+  0% { transform: translate(0,0); }
+  100% { transform: translate(-200px,-200px); }
 }
 
 /* HEADER */
@@ -22,8 +45,8 @@ header {
   display: flex;
   justify-content: space-between;
   padding: 15px 30px;
-  z-index: 1000;
   border-bottom: 1px solid red;
+  z-index: 1000;
 }
 
 .logo {
@@ -31,21 +54,20 @@ header {
   font-weight: bold;
 }
 
-/* MENU BUTTON */
+/* MENU */
 .menu-btn {
   font-size: 24px;
   cursor: pointer;
 }
 
-/* SIDE MENU */
 .menu {
   position: fixed;
+  right: -260px;
   top: 0;
-  right: -250px;
-  width: 250px;
+  width: 260px;
   height: 100%;
   background: #0a0a0a;
-  transition: 0.3s;
+  transition: 0.4s;
   padding-top: 60px;
 }
 
@@ -54,17 +76,18 @@ header {
   padding: 15px;
   color: white;
   text-decoration: none;
-  border-bottom: 1px solid #111;
+  transition: 0.2s;
 }
 
 .menu a:hover {
   background: red;
+  box-shadow: 0 0 10px red;
 }
 
-/* HERO BANNER */
+/* BANNER */
 .banner {
-  height: 400px;
-  background: linear-gradient(to right, #000, #220000);
+  height: 450px;
+  background: url("https://images.unsplash.com/photo-1606813907291-d86efa9b94db") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -75,30 +98,70 @@ header {
 .banner h1 {
   font-size: 50px;
   color: red;
+  text-shadow: 0 0 20px red;
 }
 
-/* SECTION */
+/* SECTIONS */
 .section {
-  padding: 60px 20px;
+  padding: 80px 20px;
   text-align: center;
 }
 
+/* TEAM CARDS */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .card {
-  background: #111;
+  background: rgba(255,0,0,0.05);
+  border: 1px solid red;
   margin: 10px;
   padding: 20px;
-  display: inline-block;
-  width: 250px;
+  width: 240px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px red;
+}
+
+/* MATCH */
+.match {
+  background: #111;
+  padding: 20px;
+  margin: 10px auto;
+  max-width: 400px;
   border: 1px solid red;
 }
 
+/* TABLE */
+table {
+  width: 90%;
+  margin: auto;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  border-bottom: 1px solid red;
+}
+
+th {
+  color: red;
+}
+
+/* BUTTON */
 .button {
   display: inline-block;
-  margin-top: 15px;
+  margin-top: 10px;
   padding: 10px 20px;
   background: red;
   color: white;
   text-decoration: none;
+  box-shadow: 0 0 10px red;
 }
 
 /* FOOTER */
@@ -119,27 +182,57 @@ footer {
 
 <div class="menu" id="menu">
   <a href="#">Home</a>
-  <a href="#">Teams</a>
-  <a href="#">Matches</a>
-  <a href="#">Ranking</a>
+  <a href="#teams">Teams</a>
+  <a href="#matches">Matches</a>
+  <a href="#ranking">Ranking</a>
 </div>
 
 <div class="banner">
   <h1>CS PREMIERE LEAGUE</h1>
 </div>
 
-<div class="section">
+<div class="section" id="teams">
   <h2>Teams</h2>
-  <div class="card">Team Alpha</div>
-  <div class="card">Team Bravo</div>
+  <div class="grid">
+    <div class="card">🔥 Team Alpha</div>
+    <div class="card">⚡ Team Bravo</div>
+    <div class="card">💀 Team Delta</div>
+  </div>
 </div>
 
-<div class="section">
-  <h2>Matches</h2>
-  <div class="card">
+<div class="section" id="matches">
+  <h2>Matchplan</h2>
+
+  <div class="match">
     Team Alpha vs Team Bravo<br>
     <a class="button" href="#">Match starten</a>
   </div>
+
+  <div class="match">
+    Team Delta vs Team Alpha<br>
+    <a class="button" href="#">Match ansehen</a>
+  </div>
+
+</div>
+
+<div class="section" id="ranking">
+  <h2>Ranking</h2>
+
+  <table>
+    <tr>
+      <th>Team</th>
+      <th>Punkte</th>
+    </tr>
+    <tr>
+      <td>Team Alpha</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>Team Bravo</td>
+      <td>3</td>
+    </tr>
+  </table>
+
 </div>
 
 <footer>
@@ -149,11 +242,7 @@ footer {
 <script>
 function toggleMenu() {
   let menu = document.getElementById("menu");
-  if (menu.style.right === "0px") {
-    menu.style.right = "-250px";
-  } else {
-    menu.style.right = "0px";
-  }
+  menu.style.right = (menu.style.right === "0px") ? "-260px" : "0px";
 }
 </script>
 
