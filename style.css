@@ -43,6 +43,7 @@ header {
   color: red;
 }
 
+/* DISCORD ICON (FIXED SIZE) */
 .discord-icon img {
   height: 30px;
   width: auto;
