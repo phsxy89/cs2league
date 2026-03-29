@@ -10,7 +10,7 @@ header {
   position: fixed;
   width: 100%;
   top: 0;
-  background: rgba(0,0,0,0.8);
+  background: rgba(0,0,0,0.9);
   border-bottom: 1px solid #111;
   z-index: 1000;
 }
@@ -18,13 +18,18 @@ header {
 .nav {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* WICHTIG */
+  justify-content: space-between;
+  padding: 15px 40px;
 }
 
 .logo {
-  position: absolute;
-  left: 20px;
   height: 40px;
+}
+
+/* MENU */
+.menu {
+  display: flex;
+  align-items: center;
 }
 
 .menu a {
@@ -34,9 +39,22 @@ header {
   font-size: 13px;
 }
 
-.menu a:hover,
-.menu .active {
+.menu a:hover {
   color: red;
+}
+
+/* DISCORD ICON */
+.discord-icon img {
+  height: 20px;
+  width: auto;
+  margin-left: 10px;
+  opacity: 0.8;
+  transition: 0.2s;
+}
+
+.discord-icon img:hover {
+  opacity: 1;
+  transform: scale(1.1);
 }
 
 /* HERO */
@@ -120,64 +138,4 @@ th, td {
 
 th {
   color: #777;
-}
-
-/* REGISTER PAGE */
-.register-page {
-  max-width: 600px;
-  margin: 120px auto;
-  text-align: center;
-}
-
-.subtitle {
-  color: #888;
-  margin-bottom: 30px;
-}
-
-.register-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.register-form input {
-  padding: 14px;
-  background: #0a0a0a;
-  border: 1px solid #222;
-  color: white;
-}
-
-.register-form input:focus {
-  border-color: red;
-  outline: none;
-}
-
-.register-form button {
-  padding: 14px;
-  background: red;
-  border: none;
-  color: white;
-  cursor: pointer;
-}
-
-.info-box {
-  margin-top: 30px;
-  padding: 20px;
-  background: #0a0a0a;
-  border: 1px solid #111;
-  text-align: left;
-}
-
-.info-box h3 {
-  color: red;
-
-.menu {
-  display: flex;
-  align-items: center;
-}
-
-.discord-icon img {
-  height: 5px;   /* GANZ WICHTIG */
-  width: 5px;
-  margin-left: 15px;
 }
