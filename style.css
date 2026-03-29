@@ -178,6 +178,6 @@ th {
 
 .discord-icon img {
   height: 20px;   /* GANZ WICHTIG */
-  width: auto;
+  width: 20px;
   margin-left: 15px;
 }
