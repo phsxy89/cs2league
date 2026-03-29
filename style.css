@@ -10,6 +10,7 @@ header {
   position: fixed;
   width: 100%;
   top: 0;
+  height: 70px;
   background: rgba(0,0,0,0.9);
   border-bottom: 1px solid #111;
   z-index: 1000;
@@ -19,7 +20,8 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 15px 40px;
+  padding: 0 40px;
+  height: 100%;
 }
 
 .logo {
@@ -43,7 +45,12 @@ header {
   color: red;
 }
 
-/* DISCORD ICON (FIXED SIZE) */
+/* DISCORD ICON (FIXED) */
+.discord-icon {
+  display: flex;
+  align-items: center;
+}
+
 .discord-icon img {
   height: 30px;
   width: auto;
