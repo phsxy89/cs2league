@@ -8,86 +8,151 @@
 <style>
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #0b0f1a;
+  font-family: 'Segoe UI', sans-serif;
+  background: radial-gradient(circle at top, #0f172a, #020617);
   color: white;
 }
 
+/* HEADER */
 header {
-  padding: 20px;
-  text-align: center;
-  background: #111827;
-  font-size: 28px;
-  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(10px);
 }
 
+.logo {
+  font-weight: bold;
+  font-size: 20px;
+  color: #ff5500;
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: white;
+}
+
+/* HERO */
 .hero {
-  padding: 80px 20px;
   text-align: center;
-  background: linear-gradient(180deg, #0b0f1a, #020617);
+  padding: 120px 20px;
 }
 
 .hero h1 {
-  font-size: 40px;
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  color: #aaa;
 }
 
 .button {
   display: inline-block;
-  margin-top: 20px;
-  padding: 12px 24px;
+  margin-top: 25px;
+  padding: 14px 28px;
   background: #ff5500;
-  color: white;
-  text-decoration: none;
   border-radius: 8px;
+  text-decoration: none;
+  color: white;
+  box-shadow: 0 0 20px #ff5500;
 }
 
+/* SECTIONS */
 .section {
-  padding: 50px 20px;
+  padding: 80px 20px;
   text-align: center;
+}
+
+.section h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+/* CARDS */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .card {
-  background: #111827;
-  padding: 20px;
+  background: rgba(255,255,255,0.05);
+  padding: 25px;
   margin: 10px;
-  border-radius: 10px;
-  display: inline-block;
-  width: 250px;
+  border-radius: 12px;
+  width: 260px;
+  transition: 0.3s;
 }
 
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(255,85,0,0.5);
+}
+
+/* MATCH BOX */
+.match {
+  background: #111827;
+  padding: 20px;
+  margin: 10px auto;
+  border-radius: 10px;
+  max-width: 400px;
+}
+
+/* FOOTER */
 footer {
   text-align: center;
-  padding: 20px;
+  padding: 30px;
   background: #020617;
-  font-size: 14px;
+  color: #888;
 }
 </style>
 </head>
 
 <body>
 
-<header>CS PREMIERE LEAGUE</header>
+<header>
+  <div class="logo">CS PREMIERE LEAGUE</div>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Teams</a>
+    <a href="#">Matches</a>
+  </nav>
+</header>
 
 <div class="hero">
   <h1>Die CS2 Liga für ambitionierte Spieler</h1>
+  <p>Organisierte Matches • Competitive Play • FACEIT Integration</p>
+
   <a class="button" href="https://www.faceit.com/" target="_blank">
-    Jetzt auf FACEIT spielen
+    Jetzt spielen
   </a>
 </div>
 
 <div class="section">
   <h2>Teams</h2>
-  
-  <div class="card">Team Alpha</div>
-  <div class="card">Team Bravo</div>
-  <div class="card">Team Delta</div>
+  <div class="grid">
+    <div class="card">🔥 Team Alpha</div>
+    <div class="card">⚡ Team Bravo</div>
+    <div class="card">💀 Team Delta</div>
+  </div>
 </div>
 
 <div class="section">
   <h2>Matches</h2>
-  <p>Alle Matches werden über FACEIT gespielt</p>
 
-  <a class="button" href="#" target="_blank">Match ansehen</a>
+  <div class="match">
+    Team Alpha vs Team Bravo<br><br>
+    <a class="button" href="#" target="_blank">Match starten</a>
+  </div>
+
+  <div class="match">
+    Team Delta vs Team Alpha<br><br>
+    <a class="button" href="#" target="_blank">Match ansehen</a>
+  </div>
+
 </div>
 
 <div class="section">
@@ -96,7 +161,7 @@ footer {
 </div>
 
 <footer>
-  © CS Premiere League
+  © 2026 CS Premiere League
 </footer>
 
 </body>
