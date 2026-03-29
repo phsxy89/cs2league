@@ -146,47 +146,10 @@ tr:hover {
   margin-bottom: 30px;
 }
 
-/* FORM */
-.register-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.register-form input {
-  padding: 14px;
-  background: #0a0a0a;
-  border: 1px solid #222;
-  color: white;
-}
-
-.register-form input:focus {
-  border-color: red;
-  outline: none;
-}
-
-/* BUTTON */
-.register-form button {
-  margin-top: 10px;
-  padding: 14px;
-  background: red;
-  border: none;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.register-form button:hover {
-  background: #cc0000;
-}
-
-/* INFO BOX */
-.info-box {
-  margin-top: 30px;
-  padding: 20px;
-  background: #0a0a0a;
-  border: 1px solid #111;
-  text-align: left;
+.register-page {
+  max-width: 600px;
+  margin: 120px auto;
+  text-align: center;
 }
 
 .info-box h3 {
