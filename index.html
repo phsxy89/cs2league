@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <title>Standings</title>
+  <title>CS Premiere League</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -13,8 +13,8 @@
     <div></div>
 
     <div class="menu">
-      <a href="index.html">HOME</a>
-      <a href="standings.html" class="active">STANDINGS</a>
+      <a href="index.html" class="active">HOME</a>
+      <a href="standings.html">STANDINGS</a>
       <a href="schedule.html">SCHEDULE</a>
       <a href="teams.html">TEAMS</a>
       <a href="playoffs.html">PLAYOFFS</a>
@@ -27,141 +27,64 @@
   </div>
 </header>
 
-<section class="section standings-section">
+<!-- HERO -->
+<section class="hero">
+  <img src="assets/logo.png" class="hero-logo">
 
+  <div class="buttons">
+    <a href="standings.html" class="btn primary">VIEW STANDINGS</a>
+    <a href="schedule.html" class="btn secondary">MATCH SCHEDULE</a>
+  </div>
+</section>
+
+<!-- FEATURED MATCHES -->
+<section class="section">
+  <h2>FEATURED MATCHES</h2>
+
+  <div class="matches">
+    <div class="match-card">
+      <p>FaZe Clan</p>
+      <span>VS</span>
+      <p>Team Vitality</p>
+    </div>
+
+    <div class="match-card">
+      <p>Natus Vincere</p>
+      <span>VS</span>
+      <p>G2 Esports</p>
+    </div>
+  </div>
+</section>
+
+<!-- STANDINGS PREVIEW -->
+<section class="section">
   <h2>STANDINGS</h2>
-  <p class="subtitle">
-    Group stage — 10 teams, round-robin format. Top 4 qualify for playoffs.
-  </p>
 
-  <div class="table-wrapper">
+  <table>
+    <tr>
+      <th>#</th>
+      <th>Team</th>
+      <th>W</th>
+      <th>L</th>
+      <th>PTS</th>
+    </tr>
 
-    <table class="standings-table">
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>TEAM</th>
-          <th>W</th>
-          <th>D</th>
-          <th>L</th>
-          <th>RD</th>
-          <th>PTS</th>
-        </tr>
-      </thead>
+    <tr>
+      <td>1</td>
+      <td>Natus Vincere</td>
+      <td>7</td>
+      <td>1</td>
+      <td>22</td>
+    </tr>
 
-      <tbody>
-
-        <tr class="top">
-          <td>1</td>
-          <td>Natus Vincere</td>
-          <td class="win">7</td>
-          <td>1</td>
-          <td class="loss">1</td>
-          <td>+43</td>
-          <td>22</td>
-        </tr>
-
-        <tr class="top">
-          <td>2</td>
-          <td>FaZe Clan</td>
-          <td class="win">6</td>
-          <td>1</td>
-          <td class="loss">2</td>
-          <td>+30</td>
-          <td>19</td>
-        </tr>
-
-        <tr class="top">
-          <td>3</td>
-          <td>Team Vitality</td>
-          <td class="win">6</td>
-          <td>0</td>
-          <td class="loss">3</td>
-          <td>+20</td>
-          <td>18</td>
-        </tr>
-
-        <tr class="top">
-          <td>4</td>
-          <td>G2 Esports</td>
-          <td class="win">5</td>
-          <td>1</td>
-          <td class="loss">3</td>
-          <td>+16</td>
-          <td>16</td>
-        </tr>
-
-        <tr>
-          <td>5</td>
-          <td>Cloud9</td>
-          <td class="win">4</td>
-          <td>1</td>
-          <td class="loss">4</td>
-          <td>+2</td>
-          <td>13</td>
-        </tr>
-
-        <tr>
-          <td>6</td>
-          <td>Heroic</td>
-          <td class="win">4</td>
-          <td>0</td>
-          <td class="loss">5</td>
-          <td>-1</td>
-          <td>12</td>
-        </tr>
-
-        <tr>
-          <td>7</td>
-          <td>MOUZ</td>
-          <td class="win">3</td>
-          <td>1</td>
-          <td class="loss">5</td>
-          <td>-13</td>
-          <td>10</td>
-        </tr>
-
-        <tr>
-          <td>8</td>
-          <td>Team Liquid</td>
-          <td class="win">2</td>
-          <td>1</td>
-          <td class="loss">6</td>
-          <td>-25</td>
-          <td>7</td>
-        </tr>
-
-        <tr>
-          <td>9</td>
-          <td>ENCE</td>
-          <td class="win">2</td>
-          <td>0</td>
-          <td class="loss">7</td>
-          <td>-35</td>
-          <td>6</td>
-        </tr>
-
-        <tr>
-          <td>10</td>
-          <td>Complexity</td>
-          <td class="win">1</td>
-          <td>1</td>
-          <td class="loss">7</td>
-          <td>-48</td>
-          <td>4</td>
-        </tr>
-
-      </tbody>
-    </table>
-
-  </div>
-
-  <div class="points-info">
-    <div>WIN<br><span class="green">3 PTS</span></div>
-    <div>DRAW<br><span>1 PT</span></div>
-    <div>LOSS<br><span class="red">0 PTS</span></div>
-  </div>
-
+    <tr>
+      <td>2</td>
+      <td>FaZe Clan</td>
+      <td>6</td>
+      <td>2</td>
+      <td>19</td>
+    </tr>
+  </table>
 </section>
 
 </body>
