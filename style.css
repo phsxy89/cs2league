@@ -48,16 +48,16 @@ header {
   color: #ff2a2a;
 }
 
-/* DISCORD ICON (FIXED) */
 .discord-icon {
   display: flex;
   align-items: center;
+  height: 100%;
 }
 
 .discord-icon img {
-  height: 40px;
+  height: 48px;
   width: auto;
-  margin-left: 15px;
+  margin-left: 18px;
   opacity: 0.95;
   transition: 0.2s;
 }
