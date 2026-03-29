@@ -176,15 +176,8 @@ th {
   align-items: center;
 }
 
-/* DISCORD ICON */
 .discord-icon img {
-  height: 20px;        /* klein machen */
+  height: 20px;   /* GANZ WICHTIG */
+  width: auto;
   margin-left: 15px;
-  opacity: 0.8;
-  transition: 0.2s;
-}
-
-.discord-icon img:hover {
-  opacity: 1;
-  transform: scale(1.1);
 }
