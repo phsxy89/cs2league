@@ -18,8 +18,7 @@ header {
 .nav {
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 15px;
+  justify-content: space-between; /* WICHTIG */
 }
 
 .logo {
