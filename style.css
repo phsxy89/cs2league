@@ -46,7 +46,7 @@ header {
 /* DISCORD ICON */
 .discord-icon img {
   height: 20px;
-  width: auto;
+  width: 20px;
   margin-left: 10px;
   opacity: 0.8;
   transition: 0.2s;
