@@ -60,6 +60,7 @@ header {
   margin-left: 18px;
   opacity: 0.95;
   transition: 0.2s;
+  top: 5px;
 }
 
 .discord-icon img:hover {
