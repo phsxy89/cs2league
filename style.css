@@ -172,15 +172,11 @@ th {
 .info-box h3 {
   color: red;
 
-  .discord-icon img {
-  height: 20px;
-  margin-left: 15px;
-  opacity: 0.8;
-  transition: 0.2s;
+.discord-icon img {
+  height: 22px;
+  filter: brightness(0.8);
 }
 
 .discord-icon img:hover {
-  opacity: 1;
-  transform: scale(1.1);
-}
+  filter: brightness(1.5);
 }
