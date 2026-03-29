@@ -172,15 +172,20 @@ th {
 .info-box h3 {
   color: red;
 
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+/* DISCORD ICON */
 .discord-icon img {
-  height: 22px;
+  height: 20px;        /* klein machen */
   margin-left: 15px;
   opacity: 0.8;
-  transition: all 0.2s ease;
+  transition: 0.2s;
 }
 
 .discord-icon img:hover {
   opacity: 1;
-  transform: scale(1.15);
-}
+  transform: scale(1.1);
 }
