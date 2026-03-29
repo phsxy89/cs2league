@@ -1,3 +1,4 @@
+/* GLOBAL */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -40,7 +41,7 @@ header {
   color: red;
 }
 
-/* HERO */
+/* HERO (BANNER) */
 .hero {
   height: 500px;
   background: url("assets/bg.jpg") center/cover no-repeat;
@@ -49,18 +50,17 @@ header {
   justify-content: center;
   text-align: center;
   margin-top: 70px;
+  flex-direction: column;
 }
 
-.hero h1 {
-  font-size: 60px;
-  color: red;
-  margin: 0;
+/* LOGO IM BANNER */
+.hero-logo {
+  width: 65px;   /* halb so groß wie vorher */
+  height: auto;
+  margin-bottom: 10px;
 }
 
-.hero p {
-  color: #aaa;
-}
-
+/* BUTTONS */
 .buttons {
   margin-top: 20px;
 }
@@ -70,6 +70,7 @@ header {
   margin: 5px;
   font-size: 13px;
   text-decoration: none;
+  display: inline-block;
 }
 
 .primary {
@@ -91,16 +92,19 @@ header {
   border-left: 3px solid red;
   padding-left: 10px;
   margin-bottom: 30px;
+  font-size: 18px;
 }
 
 /* MATCHES */
 .matches {
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .match-card {
   flex: 1;
+  min-width: 250px;
   background: #0a0a0a;
   padding: 20px;
   border: 1px solid #111;
@@ -124,9 +128,9 @@ th, td {
 
 th {
   color: #777;
- 
-.hero-logo {
-  width: 180px;
-  max-width: 80%;
-  margin-bottom: 10px;
+  font-weight: normal;
+}
+
+tr:hover {
+  background: #0a0a0a;
 }
