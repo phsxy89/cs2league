@@ -55,7 +55,7 @@ header {
 
 /* LOGO IM BANNER */
 .hero-logo {
-  width: 65px;   /* halb so groß wie vorher */
+  width: 100px;   /* halb so groß wie vorher */
   height: auto;
   margin-bottom: 10px;
 }
